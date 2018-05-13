@@ -6,7 +6,7 @@ import "time"
 type FeiwuMessage struct {
 	Message       string             `json:"Message"`
 	MessageDigest []byte             `json:"MessageDigest"`
-	MessageOrigin FeiwuMessageOrigin `json:"HostName"`
+	MessageOrigin FeiwuMessageOrigin `json:"MessageOrigin"`
 	MessageType   string             `json:"MessageType"`
 	ReceivedRaw   time.Time          `json:"ReceivedRaw"`
 	Received      string             `json:"Received"`

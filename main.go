@@ -91,7 +91,7 @@ func readLoop(c *net.UDPConn, webserverData *webserver.WebserverData) {
 	buf := make([]byte, 10000)
 	// TODO: optimize this!
 	// currently it is 'eventually consistent' as in, it might not find all servers in one go
-	for i := 0; i < 5; i++{
+	for i := 0; i < 5; i++ {
 		//n, cm, err1 := c.ReadFrom(buf)
 		_, _, err := c.ReadFrom(buf)
 		if err != nil {
@@ -150,6 +150,7 @@ func processFeiwuMessage(rawMessage []byte) model.FeiwuMessageOrigin {
 		HostName:    messageOriginSplit[0],
 		HostIP:      messageOriginSplit[1],
 		ServerName:  messageOriginSplit[2],
+		Role:        messageOriginSplit[3],
 		LastSeen:    time.Now().String(),
 		LastSeenRaw: time.Now(),
 	}
