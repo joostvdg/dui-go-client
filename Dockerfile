@@ -7,7 +7,7 @@ ADD . /src
 RUN go test --cover ./...
 RUN go build -v -tags netgo -o dui-go
 
-FROM alpine:3.7
+FROM alpine:3.8
 ENV LAST_UPDATE=20180506
 LABEL authors="Joost van der Griendt <joostvdg@gmail.com>"
 LABEL version="0.1.0"
