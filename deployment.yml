@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: master
-        image: caladreas/dui-go-client:0.1.0
+        image: caladreas/dui-go-client:0.1.1
         env:
         - name: MEMBERSHIP_UPDATE_RATE_IN_MILLIS
           value: "2500"
